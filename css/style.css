@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
+  background: #f2f7fb;
+  color: #222;
+}
+h1, h2, h3, h4 {
+  font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+h1 {
+  color: #0057a3;
+  font-size: 2rem;
+  margin-bottom: 0.6em;
+}
+h2 {
+  color: #108c42;
+  font-size: 1.35rem;
+}
+h3, h4 {
+  color: #ad5600;
+  font-size: 1.14rem;
+}
+
+header {
+  background: linear-gradient(90deg, #108c42 0%, #ffd600 50%, #ff4c4c 100%);
+  padding: 24px 10px 16px 10px;
+  text-align: center;
+  color: #0057a3;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.07);
+  border-bottom: 4px solid #1976d2;
+}
+header img {
+  height: 88px;
+  width: auto;
+}
+header h1 {
+  color:  #0057a3;;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 1px 2px 7px rgba(30,30,30,0.3);
+}
+
+section {
+  background: #fff;
+  margin: 28px auto 18px auto;
+  padding: 28px 28px 20px 28px;
+  max-width: 820px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,87,163,0.08);
+}
+h2 {
+  color: #045aad;
+}
+
+footer {
+  text-align: center;
+  padding: 18px;
+  background: linear-gradient(90deg, #108c42 0%, #ffd600 50%, #ff4c4c 100%);
+  color: #0057a3;
+  margin-top: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-top: 2px solid #1976d2;
+}
+
+/* Menu de navegação */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0 0;
+}
+.menu a {
+  text-decoration: none;
+  color:  #0057a3;;
+  font-weight: bold;
+  font-size: 1.12rem;
+  padding: 8px 18px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s;
+  text-shadow: 1px 1px 4px rgba(30,30,30,0.3);
+}
+.menu a:hover, .menu a:focus {
+  background: #ffd600;
+  color: #c01818;
+}
+
+/* Galeria de imagens - grid 4 colunas */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  justify-items: center;
+  align-items: start;
+}
+.galeria-grid figure {
+  width: 230px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.galeria-grid img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px #0002;
+}
+.galeria-grid figcaption {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 7px;
+  padding: 0 4px;
+}
+@media (max-width: 1100px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+  .galeria-grid figure, .galeria-grid img {
+    width: 95vw;
+    min-width: 0;
+    max-width: 99vw;
+  }
+}
+
+.form-contato {
+  max-width: 450px;
+  margin: 0 auto 18px auto;
+  background: #fff;
+  padding: 32px 28px 26px 28px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #108c4222;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.form-contato label {
+  font-weight: bold;
+  color: #045aad;
+  margin-bottom: 2px;
+  margin-top:6px;
+}
+.form-contato input, .form-contato textarea {
+  width: 100%;
+  padding: 10px 11px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  border: 1px solid #b7d1e6;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f8fafc;
+  box-sizing: border-box;
+  transition: border-color 0.18s;
+}
+.form-contato input:focus, .form-contato textarea:focus {
+  border-color: #108c42;
+  outline: none;
+}
+.form-contato button[type="submit"] {
+  background: linear-gradient(90deg,#108c42 0%,#ffd600 65%,#ff4c4c 100%);
+  color: #fff;
+  border: none;
+  padding: 13px 0;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 6px #ffd40022;
+  cursor: pointer;
+  transition: background 0.22s, filter 0.18s;
+  letter-spacing: 1px;
+  margin-top: 12px;
+}
+.form-contato button[type="submit"]:hover {
+  filter: brightness(0.96);
+}
+@media (max-width: 600px) {
+  .form-contato {
+    max-width: 99vw;
+    padding: 15px 4vw;
+  }
+}
+
+@media (max-width: 600px) {
+  header img {
+    height: 52px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  section {
+    padding: 15px;
+  }
+}
+
+/* Paleta institucional para rodapé/títulos/botões */
+footer, .footer-logo-text {
+  background: linear-gradient(90deg, #108c42 0%, #ffd600 50%, #ff4c4c 100%);
+  color: #0057a3;
+}
+.menu a {
+  color: #0057a3;
+  font-weight: bold;
+}
+.menu a:hover, .menu a:focus {
+  background: #ffd600;
+  color: #c01818;
+}
+
+/* Ajusta espaçamento títulos regionais */
+section h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+  
