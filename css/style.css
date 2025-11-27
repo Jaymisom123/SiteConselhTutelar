@@ -3,6 +3,16 @@ body {
   font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
   background: #f2f7fb;
   color: #222;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+section img, .galeria-grid img {
+  max-width: 100%;
+  height: auto;
 }
 h1, h2, h3, h4 {
   font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
@@ -34,6 +44,7 @@ header {
 header img {
   height: 88px;
   width: auto;
+  max-width: 38vw;
 }
 header h1 {
   color:  #0057a3;;
@@ -41,6 +52,42 @@ header h1 {
   letter-spacing: 1px;
   margin: 0;
   text-shadow: 1px 2px 7px rgba(30,30,30,0.3);
+}
+@media (max-width: 1000px) {
+  header img {
+    height: 60px;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+  .menu {
+    gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  header img {
+    height: 40px;
+    max-width: 65vw;
+  }
+  header h1 {
+    font-size: 1.17rem;
+    text-align: left;
+    max-width: 75vw;
+    overflow-wrap: break-word;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1rem;
+    padding-bottom: 4px;
+  }
+  section {
+    padding: 11px 6px 10px 6px;
+    margin: 18px 0;
+  }
+  footer {
+    padding-bottom: 28px;
+  }
 }
 
 section {
@@ -101,13 +148,15 @@ footer {
   align-items: start;
 }
 .galeria-grid figure {
-  width: 230px;
+  width: 100%;
+  max-width: 230px;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .galeria-grid img {
+  min-width: 0;
   width: 220px;
   height: 150px;
   object-fit: cover;
@@ -130,9 +179,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .galeria-grid figure, .galeria-grid img {
-    width: 95vw;
-    min-width: 0;
-    max-width: 99vw;
+    min-width: 0; max-width: 99vw;
   }
 }
 
@@ -193,27 +240,13 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
-  header img {
-    height: 52px;
-  }
-  header h1 {
-    font-size: 1.2rem;
-    text-align: left;
-  }
-  .menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-  section {
-    padding: 15px;
-  }
-}
-
 /* Paleta institucional para rodapé/títulos/botões */
 footer, .footer-logo-text {
   background: linear-gradient(90deg, #108c42 0%, #ffd600 50%, #ff4c4c 100%);
   color: #0057a3;
+}
+.footer-logo-text {
+  padding-bottom: 2px;
 }
 .menu a {
   color: #0057a3;
